@@ -28,16 +28,14 @@ PornView is a jpeg file viewer. Basic features:
 - thumbnails,
 - slideshow,
 - fullscreen, 
-
-#- support movies.
+- support movies.
  
 %description -l pl
 PornView jest przegl±dark± jpegów. Podstawowe w³a¶ciwo¶ci:
 - miniaturki,
 - slideshow,
 - wy¶wietlanie pe³noekranowe,
-
-#- odtwarzanie filmów.
+- odtwarzanie filmów.
 
 %prep
 %setup -q
@@ -49,8 +47,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
-#--with-xine
+%configure \
+	--enable-xine
 
 %{__make}
 
