@@ -15,6 +15,7 @@ URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel
+BuildRequires:	gettext-devel
 BuildRequires:  gtk+-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
