@@ -7,7 +7,7 @@ Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://prdownloads.sourceforge.net/%{name}-%{version}.tar.gz
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{_applnkdir}/
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-mv $RPM_BUILD_ROOT%{_prefix}/share/gnome/apps/ $RPM_BUILD_ROOT/%{_applnkdir}/
+mv $RPM_BUILD_ROOT%{_prefix}/share/gnome/apps/* $RPM_BUILD_ROOT/%{_applnkdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
