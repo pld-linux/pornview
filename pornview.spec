@@ -17,7 +17,6 @@ BuildRequires:	libtool
 BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix  /usr/X11R6
 
 %description
 PornView is a jpeg file viewer. Basic features:
