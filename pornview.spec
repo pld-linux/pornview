@@ -1,13 +1,8 @@
-#
-# INFO:
-#
-# don't unhash xine-lib-devel becouse playing movies is still experimential
-#
 Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -59,14 +54,17 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}/
+mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README ChangeLog
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/%{name}
 %{_applnkdir}/Graphics/*.desktop
 %{_pixmapsdir}/*.png
