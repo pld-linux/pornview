@@ -1,13 +1,14 @@
 Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
-Version:	0.1.3
-Release:	2
+Version:	0.2.0
+Release:	0.pre1.1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5: 7cbb2e651b75bb46c0f6b8808e7dc12a
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}pre1.tar.gz
+# Source0-md5:	339fde6d7ff0cc1053abe951601373e6
 URL:		http://pornview.sourceforge.net/
+Patch0:		%{name}-no_libcharset.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel
@@ -33,14 +34,16 @@ PornView jest przegl±dark± jpegów. Podstawowe w³a¶ciwo¶ci:
 - odtwarzanie filmów.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}pre1
+%patch0 -p1
 
 %build
 rm -f missing
 %{__libtoolize}
 %{__gettextize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--enable-xine
