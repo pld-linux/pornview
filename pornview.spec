@@ -1,5 +1,5 @@
-Summary:	jpeg file viewer
-Summary(pl):	Przegl±darka jpegów
+Summary:	JPEG file viewer
+Summary(pl):	Przegl±darka plików JPEG
 Name:		pornview
 Version:	0.2.0
 Release:	0.pre1.3
@@ -21,14 +21,14 @@ BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-PornView is a jpeg file viewer. Basic features:
+PornView is a JPEG file viewer. Basic features:
 - thumbnails,
 - slideshow,
 - fullscreen,
 - support movies.
 
 %description -l pl
-PornView jest przegl±dark± jpegów. Podstawowe w³a¶ciwo¶ci:
+PornView jest przegl±dark± plików JPEG. Podstawowe w³a¶ciwo¶ci:
 - miniaturki,
 - slideshow,
 - wy¶wietlanie pe³noekranowe,
