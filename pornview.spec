@@ -7,18 +7,20 @@ Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	gtk+2-devel
+BuildRequires:	gdk-pixbuf-devel
 BuildRequires:  gtk+-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libtool
 #BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
 %define		_prefix  /usr/X11R6
 
 %description
@@ -55,10 +57,10 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/%{_applnkdir}/
+install -d $RPM_BUILD_ROOT%{_applnkdir}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-mv $RPM_BUILD_ROOT%{_prefix}/share/gnome/apps/* $RPM_BUILD_ROOT/%{_applnkdir}/
+mv $RPM_BUILD_ROOT%{_prefix}/share/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,6 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README ChangeLog
-%attr(755,root,root)%{_bindir}/
-%{_applnkdir}/
-%{_pixmapsdir}/
+%attr(755,root,root) %{_bindir}/*
+%{_applnkdir}/Graphics/*.desktop
+%{_pixmapsdir}/*.png
