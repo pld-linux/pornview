@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5: 7cbb2e651b75bb46c0f6b8808e7dc12a
 URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
