@@ -2,7 +2,7 @@ Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
 Version:	0.2.0
-Release:	0.pre1.2
+Release:	0.pre1.3
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}pre1.tar.gz
