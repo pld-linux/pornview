@@ -1,8 +1,16 @@
 diff -urN pornview-0.2.0pre1.orig/pornview.desktop pornview-0.2.0pre1/pornview.desktop
 --- pornview-0.2.0pre1.orig/pornview.desktop	2002-12-11 20:28:51.000000000 +0100
 +++ pornview-0.2.0pre1/pornview.desktop	2004-07-04 18:04:06.706930464 +0200
-@@ -5,3 +5,4 @@
+@@ -1,7 +1,11 @@
+ [Desktop Entry]
+ Name=PornView
+ Comment=Photo/Movie collection manager
++Comment[pl]=Zarządca kolekcji zdjęć/filmów
+ Exec=pornview
  Icon=pornview.png
- Terminal=0
+-Terminal=0
++Terminal=false
  Type=Application
 +Categories=GTK;Graphics;Viewer;
++Encoding=UTF-8
++# vi: encoding=utf-8
