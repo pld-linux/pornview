@@ -2,13 +2,14 @@ Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
 Version:	0.2.0
-Release:	0.pre1.1
+Release:	0.pre1.2
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}pre1.tar.gz
 # Source0-md5:	339fde6d7ff0cc1053abe951601373e6
 URL:		http://pornview.sourceforge.net/
 Patch0:		%{name}-no_libcharset.patch
+Patch1:		%{name}-desktop.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel
@@ -36,6 +37,7 @@ PornView jest przegl±dark± jpegów. Podstawowe w³a¶ciwo¶ci:
 %prep
 %setup -q -n %{name}-%{version}pre1
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
@@ -53,10 +55,10 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_applnkdir}
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}
+mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/Graphics/* $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name}
 
@@ -68,5 +70,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_applnkdir}/Graphics/*.desktop
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
