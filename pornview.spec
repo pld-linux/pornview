@@ -10,7 +10,7 @@ Version:	0.1.1
 Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://prdownloads.sourceforge.net/%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
