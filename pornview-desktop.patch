@@ -1,0 +1,8 @@
+diff -urN pornview-0.2.0pre1.orig/pornview.desktop pornview-0.2.0pre1/pornview.desktop
+--- pornview-0.2.0pre1.orig/pornview.desktop	2002-12-11 20:28:51.000000000 +0100
++++ pornview-0.2.0pre1/pornview.desktop	2004-07-04 18:04:06.706930464 +0200
+@@ -5,3 +5,4 @@
+ Icon=pornview.png
+ Terminal=0
+ Type=Application
++Categories=GTK;Graphics;Viewer;
