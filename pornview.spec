@@ -6,8 +6,8 @@
 Summary:	jpeg file viewer
 Summary(pl):	Przegl±darka jpegów
 Name:		pornview
-Version:	0.1.1
-Release:	3
+Version:	0.1.3
+Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -18,7 +18,7 @@ BuildRequires:	gdk-pixbuf-devel
 BuildRequires:  gtk+-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
-#BuildRequires:	xine-lib-devel
+BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix  /usr/X11R6
