@@ -16,7 +16,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gdk-pixbuf-devel
 BuildRequires:	gettext-devel
-BuildRequires:  gtk+-devel
+BuildRequires:	gtk+-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtool
 BuildRequires:	xine-lib-devel
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PornView is a jpeg file viewer. Basic features:
 - thumbnails,
 - slideshow,
-- fullscreen, 
+- fullscreen,
 - support movies.
- 
+
 %description -l pl
 PornView jest przegl±dark± jpegów. Podstawowe w³a¶ciwo¶ci:
 - miniaturki,
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-mv $RPM_BUILD_ROOT%{_prefix}/share/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}/
+mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/* $RPM_BUILD_ROOT%{_applnkdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
