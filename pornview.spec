@@ -5,7 +5,7 @@ Version:	0.1.3
 Release:	2
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -16,7 +16,6 @@ BuildRequires:	libpng-devel
 BuildRequires:	libtool
 BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 PornView is a jpeg file viewer. Basic features:
