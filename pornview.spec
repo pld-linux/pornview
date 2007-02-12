@@ -4,7 +4,7 @@
 %bcond_without	xine	# XINE support for movies
 #
 Summary:	JPEG file viewer
-Summary(pl):	Przegl±darka plikÛw JPEG
+Summary(pl.UTF-8):   PrzeglƒÖdarka plik√≥w JPEG
 Name:		pornview
 Version:	0.2.0
 Release:	0.pre1.4
@@ -40,12 +40,12 @@ PornView is a JPEG file viewer. Basic features:
 - fullscreen,
 - support movies.
 
-%description -l pl
-PornView jest przegl±dark± plikÛw JPEG. Podstawowe w≥a∂ciwo∂ci:
+%description -l pl.UTF-8
+PornView jest przeglƒÖdarkƒÖ plik√≥w JPEG. Podstawowe w≈Ça≈õciwo≈õci:
 - miniaturki,
 - slideshow,
-- wy∂wietlanie pe≥noekranowe,
-- odtwarzanie filmÛw.
+- wy≈õwietlanie pe≈Çnoekranowe,
+- odtwarzanie film√≥w.
 
 %prep
 %setup -q -n %{name}-%{version}pre1
