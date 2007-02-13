@@ -4,7 +4,7 @@
 %bcond_without	xine	# XINE support for movies
 #
 Summary:	JPEG file viewer
-Summary(pl.UTF-8):   Przeglądarka plików JPEG
+Summary(pl.UTF-8):	Przeglądarka plików JPEG
 Name:		pornview
 Version:	0.2.0
 Release:	0.pre1.4
