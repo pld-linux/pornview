@@ -1,0 +1,11 @@
+--- pornview-0.2.0pre1/src/support/pixbuf_utils.c~	2002-12-13 13:29:28.000000000 +0100
++++ pornview-0.2.0pre1/src/support/pixbuf_utils.c	2012-02-13 00:24:17.392218511 +0100
+@@ -60,7 +60,7 @@
+ 	return FALSE;
+     }
+ 
+-    if (setjmp (png_ptr->jmpbuf))
++    if (setjmp (png_jmpbuf(png_ptr)))
+     {
+ 	png_destroy_write_struct (&png_ptr, &info_ptr);
+ 	fclose (handle);
