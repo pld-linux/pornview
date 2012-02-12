@@ -7,7 +7,7 @@ Summary:	JPEG file viewer
 Summary(pl.UTF-8):	Przeglądarka plików JPEG
 Name:		pornview
 Version:	0.2.0
-Release:	0.pre1.4
+Release:	0.pre1.5
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://dl.sourceforge.net/pornview/%{name}-%{version}pre1.tar.gz
@@ -15,6 +15,7 @@ Source0:	http://dl.sourceforge.net/pornview/%{name}-%{version}pre1.tar.gz
 Patch0:		%{name}-no_libcharset.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-asneeded.patch
+Patch3:		%{name}-libpng15.patch
 URL:		http://pornview.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -52,6 +53,7 @@ PornView jest przeglądarką plików JPEG. Podstawowe właściwości:
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %if %{with gtk2}
 cat >> acinclude.m4 <<'EOF'
